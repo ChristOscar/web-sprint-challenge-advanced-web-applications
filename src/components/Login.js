@@ -41,7 +41,7 @@ const Login = () => {
             <h2>Please enter your account information.</h2>
             {error && <h2 id='error'>Login error, please try again.</h2>}
             <form className='login' onSubmit={handleSubmit}>
-                <label>Username
+                <label>Username:  
                 <input
                     id='username'
                     type='text'
@@ -49,7 +49,7 @@ const Login = () => {
                     onChange={handleChange}
                     value={user.username}
                 /></label>
-                <label>Password
+                <label>Password:  
                 <input
                     id='password'
                     type='password'
@@ -57,7 +57,7 @@ const Login = () => {
                     onChange={handleChange}
                     value={user.password}
                 /></label>
-                <button id='submit'>Login</button>
+                <button id='submit' onClick={handleSubmit}> ~ Login ~ </button>
             </form>
         </ModalContainer>
     </ComponentContainer>);
