@@ -7,6 +7,7 @@ import BloomHeader from './BloomHeader';
 import Login from './Login';
 import Logout from './Logout';
 import View from './View';
+import PrivateRoute from './PrivateRoute';
 
 const App = () => {
   return (
@@ -16,8 +17,8 @@ const App = () => {
       <RouteContainer>
         <Route exact path="/" component={Login} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/view" component={View} />
-        <Route exact path="/logout" component={Logout} />     
+        <PrivateRoute exact path="/view" component={View} />
+        <PrivateRoute exact path="/logout" component={Logout} />     
       </RouteContainer>
     </AppContainer>
   )
